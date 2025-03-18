@@ -33,7 +33,10 @@ ALLOWED_HOSTS = [
 ]
 ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
 
-CSRF_TRUSTED_ORIGINS = ['https://Ecommerce-Website.onrender.com']
+CSRF_TRUSTED_ORIGINS = [
+    "https://ecommerce-website-w427.onrender.com",
+]
+
 
 # Application definition
 
