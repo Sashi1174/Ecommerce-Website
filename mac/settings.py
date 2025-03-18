@@ -26,8 +26,13 @@ SECRET_KEY = 'django-insecure-=v#zng5m^ta_))0x6i_@-y0y0c@zwby&7@wxva2qgabd+9_b4@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True;
 
+ALLOWED_HOSTS = [
+    "ecommerce-website-w427.onrender.com",  # Your Render domain
+    "127.0.0.1",  # For local development
+    "localhost",
+]
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
 
-ALLOWED_HOSTS = ['Ecommerce-Website.onrender.com', 'localhost']
 CSRF_TRUSTED_ORIGINS = ['https://Ecommerce-Website.onrender.com']
 
 # Application definition
